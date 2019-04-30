@@ -22,18 +22,18 @@ https://objectpascalprogramming.com/
 https://www.andrecelestino.com/todos-os-artigos-do-blog-andre-celestino/
 
 
-**Comentários** 
+**Comentários**   
 Usamos - (* *) - para iniciar e terminar um comentário com mais de uma linha, esse tipo de comentário é comum para se informar dados gerais e específicos de Unit e métodos, vindo no seu inicio.  Dentro dos comentários com chaves não devemos usar asteriscos, símbolos ou caracteres especiais.  Outro tipo de comentário usado é a barra de data digitada duplamente - // - neste caso o comentário se ressume a uma linha, devendo ser dado um espaço após a segunda barra para começar o texto desejado.
 
 
-**Cuidados** : 
+**Cuidados**   
 	-Vida útil do comentário. Comentários que não é atualizado juntamente com as mudanças que ocorrem no código.
         -Localização do comentário.
 	**Lembrem-se : COMENTÁRIOS COMPENSAM UM CÓDIGO RUIM.
 	Se precisar de comentários pra explicar, revise o código e tente se expressar através dele.**
 
  
-**Indentação** 
+**Indentação**     
 Ato de separar os níveis de codificação por espaços em branco.  
 No caso da Linguagem Delphi a indentação deve ter dois espaços, não se podendo usar tabulação.
 Definir a propriedade Block Idente conforme a sua preferência e utilizar sempre o TAB para indentação. Sugerido 2
@@ -64,8 +64,8 @@ Definir a propriedade Block Idente conforme a sua preferência e utilizar sempre
            Variav1, Variav2: Integer ; // Incorreto
   
 
-**if,  for, while, repeat, try, with** 
-Devem estar em mais de uma linha e indentado entre os níveis.  Quando houver begin o mesmo deve estar em uma nova linha e o seu end deve estar no mesmo nível.
+**if,  for, while, repeat, try, with**   
+Devem estar em mais de uma linha e indentado entre os níveis.  Quando houver begin o mesmo deve estar em uma nova linha e o seu end deve estar no mesmo nível.  
 
 	**Exemplos:**
 
@@ -113,7 +113,7 @@ Devem estar em mais de uma linha e indentado entre os níveis.  Quando houver be
 
 
 
-**case** 
+**case**   
 As opções ficam num nível abaixo do case, sendo assim elas devem estar indentadas.  Caso seja necessário usar o begin, o mesmo deve ser indentado em consideração a opção.  O bloco de comandos deve estar indentado em consideração ao begin.
 Observação:  considere criar uma função ao invés de utilizar o case.
 
@@ -138,7 +138,7 @@ Observação:  considere criar uma função ao invés de utilizar o case.
 
 
 
-**Quebras de linha** 
+**Quebras de linha**   
 A linha deve ter no máximo oitenta caracteres, se for ultrapassado esse limite a linha deve ser quebrada.  As linhas seguintes devem ser indentadas e quebradas da mesma maneira.
  procedure MeuMetodo(const Nome: string;
   Idade: Integer; Salario: Extended);
@@ -154,7 +154,7 @@ if (Condicao1) or
   (Condicao3) then
 
 
-**Organização de Classes**
+**Organização de Classes**  
 Quanto aos níveis : Primeiro devem ser feita as declarações em private seguidas pelas feitas em  protected, public e published.
 
 	TMyClass = classe (TObject)
@@ -164,7 +164,8 @@ Quanto aos níveis : Primeiro devem ser feita as declarações em private seguid
 	  published
 	  end;
 
-Quanto a ordenação : Primeiro os campos, seguido pelos métodos e por fim as propriedades.
+Quanto a ordenação : Primeiro os campos, seguido pelos métodos e por fim as propriedades.  
+
 	TMyClass = class(TObject)
 	 private
 	   FMyData: Integer;
@@ -177,78 +178,78 @@ Quanto a ordenação : Primeiro os campos, seguido pelos métodos e por fim as p
 
 
 
-**Convenções de nomenclatura**
-As convenções adotas para fazer nomeação na Linguagem Delphi é uma seção a parte, uma vez que o padrão muda de acordo com o que se deseja atribuir o nome.
+**Convenções de nomenclatura**  
+As convenções adotas para fazer nomeação na Linguagem Delphi é uma seção a parte, uma vez que o padrão muda de acordo com o que se deseja atribuir o nome.  
  
 
-**Arquivos**
+**Arquivos**  
 O nome do arquivo deve ser iniciado com letra u Minúscula seguido da proxima letra maiúscula e o restante deve ter letras minúsculas, salvo os casos em que esse nome é composto por mais de uma palavra, nesse caso cada palavra deve iniciar com letra maiúscula acompanhada por letras minúsculas – chamamos esse uso de maiúsculas e minúsculas de camel caps ou infix caps.  A extensão do arquivo deve conter apenas letras minúsculas.
-   Exemplo : uCadastro.pas – uPrincipal.dfm – MeuSistema.dpr
+   Exemplo : uCadastro.pas – uPrincipal.dfm – MeuSistema.dpr  
  
 
-**Classes**
+**Classes**  
 A classe deve ser iniciada pela letra T maiúscula acompanhada pelo nome seguindo o padrão infix caps.
-   	Exemplo : TNovaClasse – TPessoa – TDiario
+   	Exemplo : TNovaClasse – TPessoa – TDiario  
  
 -Campos : Semelhante a classe, só que nesse caso devemos trocar a letra T pela letra F também maiúscula.
-	Exemplo : FNome – FCidade – FLimiteCompra
+	Exemplo : FNome – FCidade – FLimiteCompra  
  
 -Métodos : Os métodos devem ter nomes de verbos no imperativo e seguir o padrão de infix caps.
-   	Exemplo : CalcularSalario(); – GravarNome(); – VerificarLimite();
+   	Exemplo : CalcularSalario(); – GravarNome(); – VerificarLimite();  
  
 
-**Parâmetros**
+**Parâmetros**  
 Também semelhante a classe, e assim como os campos trocamos a letra T, só que nesse caso pela letra A maiúscula.  Esse padrão é uma sugestão que a própria VCL não a segue completamente, sendo usada como opcional.
-   	Exemplo : NomeMetodo(AParam1, AParam2: Integer; AParam3: string);
+   	Exemplo : NomeMetodo(AParam1, AParam2: Integer; AParam3: string);  
  
 
-**Variáveis**
-Variáveis globais é um anti-padrão.
-Deve seguir o padrão Infix caps.
-Então toda variável é, ou deveria ser, local.
-Se variáveis são locais, não deveria haver colisões de nomes. Se não há colisões de nomes, por que utilizar prefixos?
-https://objectpascalprogramming.com/variaveis-locais
+**Variáveis**  
+Variáveis globais é um anti-padrão.  
+Deve seguir o padrão Infix caps.  
+Então toda variável é, ou deveria ser, local.  
+Se variáveis são locais, não deveria haver colisões de nomes. Se não há colisões de nomes, por que utilizar prefixos?  
+https://objectpascalprogramming.com/variaveis-locais  
 
 
-**Constantes**
-Assim como as variáveis, as constantes seguem o padrão Infix caps.
+**Constantes**  
+Assim como as variáveis, as constantes seguem o padrão Infix caps.  
  
 
-**Tipos enumerados**
+**Tipos enumerados**  
 As iniciais fixas dos valores possíveis dos tipos enumerados devem começar com letras minúsculas, o restante deve seguir o padrão Infix caps.
-   Exemplo : TAlignment = (taLeftJustify, taRightJustify, taCenter);
+   Exemplo : TAlignment = (taLeftJustify, taRightJustify, taCenter);  
 
 
-**Princípios SOLID**
+**Princípios SOLID**  
 Curso completo : https://app.nutror.com/v3/curso/6c7dbb987887/aula/186564?r
 
-**Sigle Responsability Principle**
+**Sigle Responsability Principle**  
 https://www.andrecelestino.com/solid-dependency-inversion-principle-dip/
 Uma classe deve fazer apenas uma coisa, deve fazê-la bem e deve fazer somente ela. Se uma classe tem mais de um motivo para ser alterada, ela não segue este princípio.
-Por exemplo, manter informação de vendas é algo que deve ser feito por uma classe Venda e não por uma classe Produto. Manter informação de Produto não deve ser feito por uma classe ItemEstoque e sim por uma classe Produto.
+Por exemplo, manter informação de vendas é algo que deve ser feito por uma classe Venda e não por uma classe Produto. Manter informação de Produto não deve ser feito por uma classe ItemEstoque e sim por uma classe Produto.  
 
-**Open Close Principle**
+**Open Close Principle**  
 https://www.andrecelestino.com/solid-open-closed-principle-ocp/
 O princípio open Close ou aberto/fechado, é um dos princípios SOLID, O princípio do aberto/fechado nos auxilia a desenhar um software que seja fácil de modificar, e que não sofre com o impacto das mesmas.
-“Entidades de software ( classes, métodos, módulo, etc ) devem estar abertas para extensão, mas fechadas para modificação”
+“Entidades de software ( classes, métodos, módulo, etc ) devem estar abertas para extensão, mas fechadas para modificação”  
 
-**Liskov substitution Principle**
+**Liskov substitution Principle**  
 https://www.andrecelestino.com/solid-liskov-substitution-principle-lsp/
 “Classes derivadas devem poder ser substitutas de suas classes base”
-Em outras palavras, toda e qualquer classe derivada deve poder ser usada como se fosse a classe base.
+Em outras palavras, toda e qualquer classe derivada deve poder ser usada como se fosse a classe base.  
 
-**Interface segregation principle**
+**Interface segregation principle**  
 https://www.andrecelestino.com/solid-interface-segregation-principle-isp/
 Princípio da segregação de interfaces
-está intimamente ligado à Abstração e orienta a identificação e definição adequada das Interfaces. O objetivo é evitar que a arquitetura seja comprometida à medida que novos módulos, componentes ou classes são adicionados ao projeto.
+está intimamente ligado à Abstração e orienta a identificação e definição adequada das Interfaces. O objetivo é evitar que a arquitetura seja comprometida à medida que novos módulos, componentes ou classes são adicionados ao projeto.  
 
-**Dependency inversion principle**
+**Dependency inversion principle**  
 https://www.andrecelestino.com/solid-dependency-inversion-principle-dip/
 Princípio da inversão de dependência
-Orienta uma forma de inverter as dependências (como o próprio nome diz), elevando o nível de abstração em uma arquitetura. O objetivo é modificá-la para que que as dependências sejam representadas por abstrações, reduzindo o acoplamento.
+Orienta uma forma de inverter as dependências (como o próprio nome diz), elevando o nível de abstração em uma arquitetura. O objetivo é modificá-la para que que as dependências sejam representadas por abstrações, reduzindo o acoplamento.  
 
-**Princípio do “Não se repita”**
-Repetir a mesma frase várias vezes pode parecer chato e entediante, não é, não é, não é? Pois bem, o artigo de hoje discute justamente sobre a repetição de código e as consequências que ela pode trazer na arquitetura do software.
+**Princípio do “Não se repita”**  
+Repetir a mesma frase várias vezes pode parecer chato e entediante, não é, não é, não é? Pois bem, o artigo de hoje discute justamente sobre a repetição de código e as consequências que ela pode trazer na arquitetura do software.  
     
     
     
